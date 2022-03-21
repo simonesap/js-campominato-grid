@@ -12,4 +12,24 @@
 // Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 // Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
-for()
+
+let grid = document.getElementById('grid');
+
+for(let i=1; i <= 64; i++) {
+    // document.getElementById('grid').innerHTML += `<div class="box" id="box${i}"></div>`;
+    let box = document.createElement('div'); // Questo è il metodo più corretto e preciso
+    box.innerHTML += getRandomInt(1, 100);
+    box.classList.add('box');
+    grid.appendChild(box);
+
+    box.addEventListener('click', function(){
+        console.log(this);
+        this.classList.add('clicked');
+    })
+}
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); 
+}

@@ -6,31 +6,52 @@
 
 :root{
     --background-dark: black;
+    --background-white: #fff;
     --text-white: #fff;
+    --text-black: black;
     --border-size: 1px;
     --border-type: solid;
-    --border-color: #fff;
+    --border-color: black;
     --margin-y: 30px 0;
+    --margin-bottom-20: 20px;
+    --padding-y: 20px 0;
+    --background-color-acquamarine: rgba(127,255,212,255);
+    --color-lightblue: rgba(100,149,237,255);
 }
 
 body {
-    background-color: var(--background-dark);
+    background-color: var(--background-color-acquamarine);
+}
+
+header{
+    background-color: var(--background-white);
+    margin-bottom: var(--margin-bottom-20);
 }
 
 h1 {
-    color: var(--text-white);
+    color: var(--text-black);
     text-align: center;
-    margin-top: var(--margin-y); 
+    padding: var(--padding-y); 
 }
 
 .container {
     border: var(--border-size) var(--border-type) var(--border-color);
     width: 60%;
     margin: 0 auto;
-    height: 50vh;;
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .box {
     width: calc(100% / 8);
     height: calc(100% / 8);
+    border: var(--border-size) var(--border-type) var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clicked{
+    background-color: var(--color-lightblue);
 }
