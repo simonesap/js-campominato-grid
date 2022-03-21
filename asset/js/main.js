@@ -25,11 +25,13 @@ for(let i=1; i <= 64; i++) {
     box.addEventListener('click', function(){
         console.log(this);
         this.classList.add('clicked');
+        console.log(this.innerHTML);
+        let numero = this.innerHTML;
     })
 }
 
 function getRandomInt(min, max) {
-    min = Math.ceil(min);
+    min = Math.ceil(min); // il ceil arrotonda per eccesso o per difetto
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min); 
 }

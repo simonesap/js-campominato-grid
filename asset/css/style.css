@@ -17,10 +17,18 @@
     --padding-y: 20px 0;
     --background-color-acquamarine: rgba(127,255,212,255);
     --color-lightblue: rgba(100,149,237,255);
+    --margin-x: 20px;
+    --margin-xx: 130px;
+    --margin-t: 120px;
+    --margin-tt: 60px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
     background-color: var(--background-color-acquamarine);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;;
 }
 
 header{
@@ -28,19 +36,60 @@ header{
     margin-bottom: var(--margin-bottom-20);
 }
 
+/* Utility */
+.d-flex{
+    display: flex;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.width-100px{
+    width: 100px;
+}
+
+.text-start{
+    text-align: start;
+}
+
+/* Utility */
+
+img{
+    vertical-align: middle;
+}
+
+.text-capitalize{
+    text-transform: capitalize;
+}
+
+.selectDifficoltà{
+}
+
+.containerHeader{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 h1 {
     color: var(--text-black);
-    text-align: center;
     padding: var(--padding-y); 
+    vertical-align: middle;
+    margin-left: var(--margin-x);
 }
 
 .container {
     border: var(--border-size) var(--border-type) var(--border-color);
     width: 60%;
     margin: 0 auto;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     flex-wrap: wrap;
+    margin-top: var(--margin-t);
+    margin-bottom: var(--margin-bottom-20: 20px;);
 }
 
 .box {
@@ -54,4 +103,27 @@ h1 {
 
 .clicked{
     background-color: var(--color-lightblue);
+}
+
+.boxGreen{
+    background-color: yellow;
+    color: #101010;
+}
+
+.boxRed{
+    background-color: red;
+    color: #101010;
+}
+
+footer{
+    background-color: var(--background-white);
+
+}
+
+.containerFooter{
+    width: 80%;
+    margin-left: var(--margin-xx);
+    margin-right: 0 auto;
+    margin-top: var(--margin-tt);
+    padding: var(--padding-y);
 }
