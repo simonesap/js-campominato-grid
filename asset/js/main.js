@@ -90,7 +90,7 @@ bottone.addEventListener('click', function(){
 
     for (let i = 0; i < numeroCelle; i++) {
         let grid = document.getElementById('grid');
-        let box = document.getElementById('div');
+        let box = document.createElement('div');
 
         grid.appendChild(box);
 
